@@ -1,4 +1,5 @@
 import React from "react";
+import {Navbar} from "./components";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import {
   Home,
@@ -15,6 +16,7 @@ import {
 function App() {
   return (
     <Router>
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="about" element={<About />} />
