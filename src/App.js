@@ -1,5 +1,5 @@
 import React from "react";
-import {Navbar} from "./components";
+import { Footer, Navbar } from "./components";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import {
   Home,
@@ -26,6 +26,7 @@ function App() {
         <Route path="checkout" element={<Checkout />} />
         <Route path="*" element={<Error />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }
