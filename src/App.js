@@ -1,5 +1,5 @@
 import React from "react";
-import { Footer, Navbar } from "./components";
+import { Footer, Navbar, Sidebar } from "./components";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import {
   Home,
@@ -17,6 +17,7 @@ function App() {
   return (
     <Router>
       <Navbar />
+      <Sidebar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="about" element={<About />} />
