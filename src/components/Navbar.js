@@ -3,7 +3,7 @@ import logo from "../assets/logo.svg";
 import { FaBars } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { links } from "../utils/constants";
-import CartButton from "./CartButtons";
+import CartButtons from "./CartButtons";
 
 const Navbar = () => {
   return (
@@ -27,7 +27,7 @@ const Navbar = () => {
             );
           })}
         </ul>
-        <CartButton />
+        <CartButtons />
       </div>
     </NavContainer>
   );
