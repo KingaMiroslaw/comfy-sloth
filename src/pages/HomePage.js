@@ -1,9 +1,10 @@
-import { Contact, Hero, Services } from "../components";
+import { Contact, Hero, Services, FeaturedProducts } from "../components";
 
 const HomePage = () => {
   return (
     <main>
       <Hero />
+      <FeaturedProducts />
       <Services />
       <Contact />
     </main>
