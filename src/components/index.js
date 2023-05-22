@@ -7,10 +7,9 @@ import Loading from "./Loading";
 import Navbar from "./Navbar";
 import PageHero from "./PageHero";
 import Product from "./Product";
+import ProductImages from "./ProductImages";
 import Services from "./Services";
 import Sidebar from "./Sidebar";
-
-
 
 export {
   Contact,
@@ -22,6 +21,7 @@ export {
   Navbar,
   PageHero,
   Product,
+  ProductImages,
   Services,
   Sidebar,
 };
