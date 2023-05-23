@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useParams, useNavigate, Link } from "react-router-dom";
 import { useProductsContext } from "../context/products_context";
 import { single_product_url as url } from "../utils/constants";
-import { Loading, Error, PageHero, ProductImages } from "../components";
+import { Loading, Error, PageHero, ProductImages, Stars } from "../components";
 import { formatPrice } from "../utils/helpers";
 import styled from "styled-components";
 
@@ -58,7 +58,7 @@ const SingleProductPage = () => {
           <ProductImages images={images} />
           <section className="content">
             <h2>{name}</h2>
-            {/* Stars component */}
+            <Stars stars={stars} reviews={reviews} />
             <h5 className="price">{formatPrice(price)}</h5>
             <p className="desc">{description}</p>
             <p className="info">

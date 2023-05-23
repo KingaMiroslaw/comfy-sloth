@@ -10,6 +10,7 @@ import Product from "./Product";
 import ProductImages from "./ProductImages";
 import Services from "./Services";
 import Sidebar from "./Sidebar";
+import Stars from "./Stars";
 
 export {
   Contact,
@@ -24,4 +25,5 @@ export {
   ProductImages,
   Services,
   Sidebar,
+  Stars,
 };
