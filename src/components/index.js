@@ -1,3 +1,4 @@
+import AddToCart from "./AddToCart";
 import Contact from "./Contact";
 import Error from "./Error";
 import FeaturedProducts from "./FeaturedProducts";
@@ -13,6 +14,7 @@ import Sidebar from "./Sidebar";
 import Stars from "./Stars";
 
 export {
+  AddToCart,
   Contact,
   Error,
   FeaturedProducts,
