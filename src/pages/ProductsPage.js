@@ -1,5 +1,37 @@
+import styled from "styled-components";
+import { PageHero } from "../components";
+
 const ProductsPage = () => {
-  return <h4>Products Page</h4>;
+  return (
+    <main>
+      <PageHero title="products" />
+      <Wrapper className="page">
+        <div className="section-center products">
+          {/* Filters component */}
+          <h4>Filters</h4>
+          <div>
+            {/* Sort component */}
+            <h4>Sort</h4>
+            {/* ProductList component */}
+            <h4>Product List</h4>
+          </div>
+        </div>
+      </Wrapper>
+    </main>
+  );
 };
+
+const Wrapper = styled.div`
+  .products {
+    display: grid;
+    gap: 3rem 1.5rem;
+    margin: 4rem auto;
+  }
+  @media (min-width: 768px) {
+    .products {
+      grid-template-columns: 200px 1fr;
+    }
+  }
+`;
 
 export default ProductsPage;
