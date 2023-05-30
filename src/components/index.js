@@ -9,6 +9,7 @@ import Navbar from "./Navbar";
 import PageHero from "./PageHero";
 import Product from "./Product";
 import ProductImages from "./ProductImages";
+import ProductList from "./ProductList";
 import Services from "./Services";
 import Sidebar from "./Sidebar";
 import Stars from "./Stars";
@@ -25,6 +26,7 @@ export {
   PageHero,
   Product,
   ProductImages,
+  ProductList,
   Services,
   Sidebar,
   Stars,
