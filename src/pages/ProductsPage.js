@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { PageHero, ProductList } from "../components";
+import { PageHero, ProductList, Sort } from "../components";
 
 const ProductsPage = () => {
   return (
@@ -10,8 +10,7 @@ const ProductsPage = () => {
           {/* Filters component */}
           <h4>Filters</h4>
           <div>
-            {/* Sort component */}
-            <h4>Sort</h4>
+            <Sort />
             <ProductList />
           </div>
         </div>

@@ -12,6 +12,7 @@ import ProductImages from "./ProductImages";
 import ProductList from "./ProductList";
 import Services from "./Services";
 import Sidebar from "./Sidebar";
+import Sort from "./Sort";
 import Stars from "./Stars";
 
 export {
@@ -29,5 +30,6 @@ export {
   ProductList,
   Services,
   Sidebar,
+  Sort,
   Stars,
 };
