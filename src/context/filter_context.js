@@ -7,6 +7,7 @@ import {
   SET_LISTVIEW,
   UPDATE_SORT,
   SORT_PRODUCTS,
+  UPDATE_FILTERS,
 } from "../actions";
 
 const initialState = {
@@ -50,10 +51,15 @@ export const FilterProvider = ({ children }) => {
     const value = e.target.value;
     dispatch({ type: UPDATE_SORT, payload: value });
   };
+  const updateFilters = (e) => {
+    let name = e.target.name;
+    let value = e.target.value;
+    dispatch({ type: UPDATE_FILTERS, payload: { name, value } });
+  };
 
   return (
     <FilterContext.Provider
-      value={{ ...state, setGridView, setListView, updateSort }}
+      value={{ ...state, setGridView, setListView, updateSort, updateFilters }}
     >
       {children}
     </FilterContext.Provider>

@@ -14,6 +14,7 @@ const Filters = () => {
       shipping,
     },
     all_products,
+    updateFilters,
   } = useFilterContext();
 
   return (
@@ -21,7 +22,16 @@ const Filters = () => {
       <div className="content">
         <form onSubmit={(e) => e.preventDefault()}>
           {/* search input */}
-          <h5>Search </h5>
+          <div className="form-control">
+            <input
+              type="text"
+              name="text"
+              value={text}
+              placeholder="search"
+              onChange={updateFilters}
+              className="search-input"
+            />
+          </div>
           {/* end of search input */}
 
           {/* category */}
