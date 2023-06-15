@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { useFilterContext } from "../context/filter_context";
-import { getUniqueValues} from "../utils/helpers";
+import { getUniqueValues } from "../utils/helpers";
 
 const Filters = () => {
   const {
@@ -40,7 +40,26 @@ const Filters = () => {
           {/* end of search input */}
 
           {/* category */}
-          <h5>Category </h5>
+          <div className="form-control">
+            <h5>category</h5>
+            <div>
+              {categories.map((c, index) => {
+                return (
+                  <button
+                    key={index}
+                    type="button"
+                    name="category"
+                    onClick={updateFilters}
+                    className={`${
+                      category === c.toLowerCase() ? "active" : null
+                    }`}
+                  >
+                    {c}
+                  </button>
+                );
+              })}
+            </div>
+          </div>
           {/* end of category */}
 
           {/* company */}
