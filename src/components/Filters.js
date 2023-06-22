@@ -17,6 +17,7 @@ const Filters = () => {
     },
     all_products,
     updateFilters,
+    clearFilters,
   } = useFilterContext();
 
   const categories = getUniqueValues(all_products, "category");
@@ -150,7 +151,7 @@ const Filters = () => {
           </div>
           {/* end of shipping */}
         </form>
-        <button type="button" className="clear-btn">
+        <button type="button" className="clear-btn" onClick={clearFilters}>
           clear filters
         </button>
       </div>
