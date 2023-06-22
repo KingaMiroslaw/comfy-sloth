@@ -138,7 +138,16 @@ const Filters = () => {
           {/* end of price */}
 
           {/* shipping */}
-          <h5>Shipping </h5>
+          <div className="form-control shipping">
+            <label htmlFor="shipping">free shipping</label>
+            <input
+              type="checkbox"
+              name="shipping"
+              id="shipping"
+              checked={shipping}
+              onChange={updateFilters}
+            />
+          </div>
           {/* end of shipping */}
         </form>
         <button type="button" className="clear-btn">
@@ -227,11 +236,9 @@ const Wrapper = styled.section`
     margin-bottom: 0.25rem;
   }
   .shipping {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    align-items: center;
+    display: flex;
     text-transform: capitalize;
-    column-gap: 0.5rem;
+    column-gap: 1rem;
     font-size: 1rem;
   }
   .clear-btn {
