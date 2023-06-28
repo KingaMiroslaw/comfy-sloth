@@ -1,14 +1,14 @@
 import styled from "styled-components";
 import { useCartContext } from "../context/cart_context";
 import { Link } from "react-router-dom";
+import CartColumns from "./CartColumns";
 
 const CartContent = () => {
   const { cart, clearCart } = useCartContext();
 
   return (
     <Wrapper className="section section-center">
-      {/* Cart Columns component */}
-      <h2>Cart Columns</h2>
+      <CartColumns />
       {cart.map((item) => {
         // Cart Item component
         return (
