@@ -1,4 +1,5 @@
 import AddToCart from "./AddToCart";
+import CartContent from "./CartContent";
 import Contact from "./Contact";
 import Error from "./Error";
 import FeaturedProducts from "./FeaturedProducts";
@@ -18,6 +19,7 @@ import Stars from "./Stars";
 
 export {
   AddToCart,
+  CartContent,
   Contact,
   Error,
   FeaturedProducts,
