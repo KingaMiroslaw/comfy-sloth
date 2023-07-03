@@ -3,6 +3,7 @@ import { useCartContext } from "../context/cart_context";
 import { Link } from "react-router-dom";
 import CartColumns from "./CartColumns";
 import CartTotals from "./CartTotals";
+import CartItem from "./CartItem";
 
 const CartContent = () => {
   const { cart, clearCart } = useCartContext();
@@ -11,12 +12,7 @@ const CartContent = () => {
     <Wrapper className="section section-center">
       <CartColumns />
       {cart.map((item) => {
-        // Cart Item component
-        return (
-          <h2 key={item.id} {...item}>
-            Cart Item
-          </h2>
-        );
+        return <CartItem key={item.id} {...item} />;
       })}
       <hr />
       <div className="link-container">
