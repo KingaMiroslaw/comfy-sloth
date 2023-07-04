@@ -1,6 +1,6 @@
 import React, { useContext, useReducer } from "react";
 import reducer from "../reducers/cart_reducer";
-import { ADD_TO_CART } from "../actions";
+import { ADD_TO_CART, REMOVE_CART_ITEM } from "../actions";
 import { useEffect } from "react";
 
 const getLocalStorage = () => {
@@ -27,7 +27,9 @@ export const CartProvider = ({ children }) => {
   const addToCart = (id, color, amount, product) => {
     dispatch({ type: ADD_TO_CART, payload: { id, color, amount, product } });
   };
-  const removeItem = (id) => {};
+  const removeItem = (id) => {
+    dispatch({ type: REMOVE_CART_ITEM, payload: id });
+  };
   const toggleAmount = (id, value) => {};
   const clearCart = () => {};
 
