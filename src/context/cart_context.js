@@ -5,6 +5,7 @@ import {
   REMOVE_CART_ITEM,
   CLEAR_CART,
   TOGGLE_CART_ITEM_AMOUNT,
+  COUNT_CART_TOTALS,
 } from "../actions";
 import { useEffect } from "react";
 
@@ -50,6 +51,7 @@ export const CartProvider = ({ children }) => {
 
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(state.cart));
+    dispatch({ type: COUNT_CART_TOTALS });
   }, [state.cart]);
 
   return (
