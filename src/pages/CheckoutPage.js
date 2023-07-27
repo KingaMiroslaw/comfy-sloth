@@ -1,11 +1,13 @@
 import styled from "styled-components";
 import { PageHero } from "../components";
 import { formatPrice } from "../utils/helpers";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useCartContext } from "../context/cart_context";
+import GooglePayButton from "@google-pay/button-react";
 
 const CheckoutPage = () => {
   const { cart, total_amount, shipping_fee } = useCartContext();
+  const navigate = useNavigate();
 
   return (
     <main>
@@ -28,6 +30,44 @@ const CheckoutPage = () => {
             </h4>
           </article>
         )}
+        <GooglePayButton
+          environment="TEST"
+          paymentRequest={{
+            apiVersion: 2,
+            apiVersionMinor: 0,
+            allowedPaymentMethods: [
+              {
+                type: "CARD",
+                parameters: {
+                  allowedAuthMethods: ["PAN_ONLY", "CRYPTOGRAM_3DS"],
+                  allowedCardNetworks: ["MASTERCARD", "VISA"],
+                },
+                tokenizationSpecification: {
+                  type: "PAYMENT_GATEWAY",
+                  parameters: {
+                    gateway: "example",
+                    gatewayMerchantId: "exampleGatewayMerchantId",
+                  },
+                },
+              },
+            ],
+            merchantInfo: {
+              merchantId: "12345678901234567890",
+              merchantName: "Demo Merchant",
+            },
+            transactionInfo: {
+              totalPriceStatus: "FINAL",
+              totalPriceLabel: "Total",
+              totalPrice: "100.00",
+              currencyCode: "USD",
+              countryCode: "US",
+            },
+          }}
+          onLoadPaymentData={(paymentRequest) => {
+            console.log("load payment data", paymentRequest);
+            navigate("/");
+          }}
+        />
       </Wrapper>
     </main>
   );
@@ -37,6 +77,8 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
   article {
     border: 1px solid var(--clr-grey-8);
     border-radius: var(--radius);
