@@ -20,7 +20,7 @@ function App() {
         <Navbar />
         <Sidebar />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/comfy-sloth" element={<Home />} />
           <Route path="about" element={<About />} />
           <Route path="cart" element={<Cart />} />
           <Route path="products" element={<Products />} />
