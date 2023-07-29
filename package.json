@@ -2,6 +2,7 @@
   "name": "comfy-sloth",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://kingamiroslaw.github.io/comfy-sloth",
   "dependencies": {
     "@auth0/auth0-react": "^2.1.1",
     "@google-pay/button-react": "^3.0.10",
