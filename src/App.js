@@ -20,7 +20,9 @@ function App() {
         <Navbar />
         <Sidebar />
         <Routes>
-          <Route path="/comfy-sloth" element={<Home />} />
+          {["/", "/comfy-sloth"].map((path, index) => {
+            return <Route path={path} element={<Home />} key={index} />;
+          })}
           <Route path="about" element={<About />} />
           <Route path="cart" element={<Cart />} />
           <Route path="products" element={<Products />} />
