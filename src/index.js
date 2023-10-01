@@ -11,8 +11,8 @@ import { UserProvider } from "./context/user_context";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <Auth0Provider
-    domain="dev-0bas6hjdpn13nqmf.us.auth0.com"
-    clientId="VT7gqZ3sW4cZkFtEGHnsze6cO0WIFJLI"
+    domain={process.env.REACT_APP_OKTA_DOMAIN}
+    clientId={process.env.REACT_APP_OKTA_CLIENT_ID}
     authorizationParams={{
       redirect_uri: window.location.origin,
     }}
