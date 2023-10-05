@@ -94,4 +94,4 @@ npm run build
 
 # Demo
 
-[See DEMO](https://kingamiroslaw.github.io/comfy-sloth/)
+[See DEMO](https://comfy-sloth-nine.vercel.app/)
